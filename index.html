@@ -7,10 +7,17 @@
 <script src="js/jquery-3.1.0.js"></script>
 <script src="js/functions.js"></script>
 <script type="text/javascript">
-  var catalogue = [{"name":"Lenovo Thinkpad 41A4298","website":"bing"},{"name":"Lenovo Thinkpad 41A2222","website":"google"}];
+  var catalogue = [
+                    ['fruits', 'banane'],
+                    ['fruits', 'pomme'],
+                    ['fruits', 'tomate'],
+                    ['legumes', 'tomate']
+                  ];
   console.log(catalogue);
-  var filtrer = filtrage(catalogue);
+  var filtrer = filtrage(catalogue, [null,'tomate']);
   console.log(filtrer);
+  console.log('Associative array');
+  console.log(toAssociativeArray(catalogue));
 </script>
 
 
