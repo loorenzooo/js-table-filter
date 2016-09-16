@@ -16,13 +16,24 @@
   console.log(catalogue);
   var filtrer = filtrage(catalogue, [null,'tomate']);
   console.log(filtrer);
-  console.log('Associative array');
-  console.log(toAssociativeArray(catalogue));
+  var htmlTable = toAssociativeArray(catalogue);
+  console.log(htmlTable);
 </script>
 
 
 
 <h2>Advanced table layout b</h2>
+
+<div id="table-container">
+Table goes here
+</div>
+
+
+<script type="text/javascript">
+// Convertit en html le catalogue et affiche le rendu
+$("#table-container").html(toHtml(catalogue));
+</script>
+
 
 <table>
 
