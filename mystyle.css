@@ -1,3 +1,15 @@
 td {
   border: 1px solid;
 }
+
+div {
+  border: 1px solid;
+}
+
+.left {
+  float:left;
+}
+
+.clear {
+  clear:both;
+}

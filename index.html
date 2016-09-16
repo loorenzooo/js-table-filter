@@ -20,103 +20,50 @@
   console.log(htmlTable);
 </script>
 
-
-
-<h2>Advanced table layout b</h2>
+<h2>Advanced table layout</h2>
 
 <div id="table-container">
 Table goes here
 </div>
 
-
 <script type="text/javascript">
 // Convertit en html le catalogue et affiche le rendu
-$("#table-container").html(toHtml(catalogue));
+//$("#table-container").html(toHtml(htmlTable));
 </script>
 
+<div class="entete">
+  entete
+</div>
 
-<table>
+<!-- Conteneur niv1 -->
+<div class="left" style="height:200px">
+1
+</div>
 
-<!-- Data 1 -->
-  <tr><td colspan="3">Group1</td></tr>
-  <tr>
-    <td rowspan="4">
-      Data1
-    </td>
-    <td rowspan="2">
-      Data11
-    </td>
-    <td>
-      Data111
-    </td>
-  </tr>
+<!-- Conteneur niv 2 -->
+<div class="left" style="height:200px">
 
-  <tr>
-    <td>
-      Data112
-    </td>
-  </tr>
+<div style="height:100px">
+2
 
-  <tr>
-    <!-- <td rowspan="4">
-      Data1
-    </td> -->
-    <td rowspan="2">
-      Data12
-    </td>
-    <td>
-      Data121
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      Data122
-    </td>
-  </tr>
+<div style="height:50px" class="left">
+  3
+</div>
 
 
-  <!-- Data 2 -->
-  <tr><td colspan="3">Group2</td></tr>
+</div>
 
-    <tr>
-      <td rowspan="4">
-        Data2
-      </td>
-      <td rowspan="2">
-        Data21
-      </td>
-      <td>
-        Data211
-      </td>
-    </tr>
+<div style="height:100px">
+5
+</div>
 
-    <tr>
-      <td>
-        Data212
-      </td>
-    </tr>
-
-    <tr>
-      <!-- <td rowspan="4">
-        Data1
-      </td> -->
-      <td rowspan="2">
-        Data22
-      </td>
-      <td>
-        Data221
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        Data222
-      </td>
-    </tr>
+</div>
 
 
 
-</table>
+
+
+
+
 </body>
 </html>
