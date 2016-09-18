@@ -33,7 +33,7 @@ function toAssociativeArray(catalogue){
     // Ajout de la valeur de la feuille
     var niv2 = new Object();
     niv2.label = row[1];
-    retour[row[0]].items.push(niv2);
+    retour[row[0]].items[row[1]] = niv2;
     retour[row[0]].rowspan = retour[row[0]].rowspan + 1;
   }
   return retour;
