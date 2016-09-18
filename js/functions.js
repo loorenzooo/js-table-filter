@@ -31,7 +31,9 @@ function toAssociativeArray(catalogue){
       retour[row[0]].rowspan = 0
     }
     // Ajout de la valeur de la feuille
-    retour[row[0]].items.push(row[1]);
+    var niv2 = new Object();
+    niv2.label = row[1];
+    retour[row[0]].items.push(niv2);
     retour[row[0]].rowspan = retour[row[0]].rowspan + 1;
   }
   return retour;
@@ -43,21 +45,16 @@ function toHtml(catalogue){
   for (var niv1_prop in catalogue){
     // Niveau 1
     var niv1 = catalogue[niv1_prop];
-    retour += "<tr rowspan='"+niv1.rowspan+"'>";
-    retour += "<td>"+niv1.label+"</td>";
-    retour += "</tr>";
+    retour += "<tr><td rowspan='"+niv1.rowspan+"'>"+niv1.label+"</td>";
 
-    // Niveau 1 container
-    retour += "<div class='left'>";
-    // Niveau 2
+    // Boucle sur niveau 2
+    var niv2_tr = '';
     for (var niv2_prop in niv1.items){
-      var niv2 = niv1.items[niv2_prop];
-      retour += "<div>";
-      retour += niv2;
-      retour += "</div>";
+        var niv2 = niv1.items[niv2_prop];
+        retour += niv2_tr+"<td>"+niv2.label+"</td></tr>";
+        niv2_tr="<tr>";
     }
-    retour += "</div>";
   }
-  retour += "</div>";
+  retour += "</table>";
   return retour;
 }
