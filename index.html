@@ -8,14 +8,16 @@
 <script src="js/functions.js"></script>
 <script type="text/javascript">
   var catalogue = [
-                    ['fruits', 'banane'],
-                    ['fruits', 'pomme'],
-                    ['fruits', 'tomate'],
-                    ['legumes', 'tomate'],
-                    ['legumes', 'carotte']
+                    ['pave1', 'marche1', 'famille1', 'sousfamille1', 'code1', 'produit1'],
+                    ['pave1', 'marche1', 'famille1', 'sousfamille1', 'code2', 'produit1'],
+                    ['pave1', 'marche1', 'famille1', 'sousfamille1', 'code3', 'produit1'],
+                    ['pave1', 'marche1', 'famille1', 'sousfamille2', 'code4', 'produit1'],
+                    ['pave1', 'marche1', 'famille1', 'sousfamille2', 'code5', 'produit1'],
+                    ['pave2', 'marche2', 'famille2', 'sousfamille3', 'code6', 'produit1'],
+                    ['pave2', 'marche2', 'famille2', 'sousfamille3', 'code7', 'produit1'],
                   ];
   console.log(catalogue);
-  var filtrer = filtrage(catalogue, [null,'pomme']);
+  var filtrer = filtrage(catalogue, [null,'marche1']);
   console.log(filtrer);
   var htmlTable = toAssociativeArray(catalogue);
   var filteredHtmlTable = toAssociativeArray(filtrer);
